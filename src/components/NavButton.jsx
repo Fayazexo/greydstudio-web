@@ -60,6 +60,7 @@ const Circle = styled(BaseCircle)`
             position: absolute;
             width: 100%;
             top: 50%;
+            display: none;
             background-color: #cecece;
             transform: translateY(-50%) rotate(45deg);
           }
@@ -73,6 +74,7 @@ const Circle = styled(BaseCircle)`
             width: 100%;
             top: 50%;
             background-color: #cecece;
+            display: none;
             transform: translateY(-50%) rotate(-45deg);
           }
         `
