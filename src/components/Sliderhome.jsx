@@ -4,7 +4,7 @@ import "react-animated-slider/build/horizontal.css"
 
 const content = [
   {
-    title: "Exterior Design",
+    title: "Smallest Details",
     description: "With precision",
     // button: "More Detail",
     // link: "/#",
@@ -34,7 +34,7 @@ const content = [
 ]
 
 export default () => (
-  <Slider className="slider-wrapper" autoplay={300}>
+  <Slider className="slider-wrapper" autoplay={300} touchDisabled={true}>
     {content.map((item, index) => (
       <div
         key={index}

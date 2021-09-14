@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { withRouter } from "react-router"
+import { ReactComponent as GreyBLogo } from "../Assets/logoblack.svg"
 import GreyLogo from "../Assets/logowhite.svg"
 import {
   Body,
@@ -158,6 +159,9 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
           <NavButton open={isOn} />
         </Container>
         <Body className="midwrpr" open={isOn} shouldAnimate={shouldAnimate}>
+          <div className="shortNavLogo">
+            <GreyBLogo />
+          </div>
           <div className="conPage">
             <Page
               className="mainBtn"

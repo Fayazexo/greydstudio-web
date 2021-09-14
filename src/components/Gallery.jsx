@@ -22,9 +22,6 @@ const ImageWrapper = styled.div`
   }
   @media only screen and (max-width: 750px) {
     grid-template-columns: 1fr;
-    img {
-      height: 200px;
-    }
   }
 `
 const Flexxxo = styled.div`
