@@ -34,7 +34,7 @@ const content = [
 ]
 
 export default () => (
-  <Slider className="slider-wrapper" autoplay={300} touchDisabled={true}>
+  <Slider className="slider-wrapper" autoplay={3000} touchDisabled={true}>
     {content.map((item, index) => (
       <div
         key={index}
