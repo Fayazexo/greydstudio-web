@@ -66,7 +66,7 @@ export default class Responsive extends Component {
       ],
     }
     return (
-      <div className="slick">
+      <div className="slick width-80">
         <Slider {...settings}>
           <CustomSlide className="itm" index={1}>
             <div className="bg">

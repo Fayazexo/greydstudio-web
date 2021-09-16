@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import ReactGa from "react-ga"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import NavigationMenu from "./components/Nav"
 import Preloader from "./components/Preloader"
@@ -44,10 +43,10 @@ function App({ message }) {
       })
   }, [loading])
 
-  useEffect(() => {
-    ReactGa.initialize("G-LN45WH3Q5Q")
-    ReactGa.pageview(window.location.pathname + window.location.search)
-  }, [])
+  // useEffect(() => {
+  //   ReactGa.initialize("G-LN45WH3Q5Q")
+  //   ReactGa.pageview(window.location.pathname + window.location.search)
+  // }, [])
 
   return (
     <Router>

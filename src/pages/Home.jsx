@@ -136,7 +136,7 @@ const Home = ({ history }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 slick slicknews p-3 mb-0">
+            {/* <div className="col-md-4 slick slicknews p-3 mb-0">
               <div className="slick-slide d-block">
                 <div className="mr-0">
                   <div className="itm mr-0">
@@ -203,7 +203,7 @@ const Home = ({ history }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </Reveal>

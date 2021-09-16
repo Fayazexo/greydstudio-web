@@ -5,7 +5,7 @@ export default () => (
     <div className="row m-2-hor">
       <div className="col-md-6 pt-5">
         <div className="col-home">
-          <div className="thumb">
+          <div className="">
             <img
               src="./img/Home-page-alone-photo.jpg"
               className="img-fluid"
@@ -22,12 +22,12 @@ export default () => (
               Five Reasons Why You Should Choose{" "}
               <span className="color">Grey.D'Studio</span>
             </div>
-            <div className="content">
+            {/* <div className="content">
               We believe that interior design is more than great functionality
               and beautiful aesthetics. We aim to make your home interiors a
               reflection of your personality. Your home should be something that
               you and your family take pride in and love to spend time in.
-            </div>
+            </div> */}
             <ul className="list-home">
               <li>Attention To The Details</li>
               <li>Quality Of Our Work</li>

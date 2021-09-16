@@ -92,7 +92,7 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
         header.classList.add("sticky")
         totop.classList.add("show")
       } else {
-        header.classList.remove("sticky")
+        header.classList.add("sticky")
         totop.classList.remove("show")
       }
     })
@@ -103,7 +103,7 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
 
   return (
     <header>
-      <div id="header"></div>
+      <div id="header" className="sticky"></div>
       <div className="navBar">
         <div className="navLogo">
           <div className="logo">
