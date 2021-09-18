@@ -94,7 +94,7 @@ export default class Responsive extends Component {
               className="bg"
             >
               <img
-                src="./img/projects/Project-Banner-Emon-Interior.jpg"
+                src="./img/projects/Project-Banner-Tushar-Residence.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
