@@ -28,16 +28,16 @@ export const Bar1 = styled(BaseBarStyle)`
 `
 
 export const Bar2 = styled(BaseBarStyle)`
-  width: 61%;
+  width: 85%;
 `
 
 export const Bar3 = styled(BaseBarStyle)`
-  width: 21%;
+  width: 70%;
 `
 
 const BaseCircle = styled.div`
   position: relative;
-  width: 75px;
+  width: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -79,6 +79,6 @@ const Circle = styled(BaseCircle)`
           }
         `
       : css`
-          padding: 20px 15px;
+          padding: 4px 4px;
         `}
 `

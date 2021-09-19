@@ -107,12 +107,14 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
       <div className="navBar">
         <div className="navLogo">
           <div className="logo">
-            <img
-              onClick={() => setLinkHandler("home")}
-              src={GreyLogo}
-              className="img-fluid logolink"
-              alt="#"
-            />
+            {!isOn && (
+              <img
+                onClick={() => setLinkHandler("home")}
+                src={GreyLogo}
+                className="img-fluid logolink"
+                alt="#"
+              />
+            )}
             {/* <span
               onClick={() => openLinks("tel:+8801989359890")}
               className="callus"

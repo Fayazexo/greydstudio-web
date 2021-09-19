@@ -159,7 +159,7 @@ export const Container = styled.div`
 			right: 0;		
 			top: 0;
 			z-index: 5;
-      background-color: ${theme.colors.black};
+      background-color: transparent;
 		`
       : `
 			top: 5%;
@@ -171,9 +171,10 @@ export const Container = styled.div`
 
   &:hover {
     cursor: pointer;
-    background-color: ${({ open }) => !open && theme.colors.black};
+    background-color: transparent;
     ${Bar1}, ${Bar2}, ${Bar3} {
       width: 100% !important;
     }
   }
 `
+// ${({ open }) => !open && theme.colors.black}
