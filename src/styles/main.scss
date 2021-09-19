@@ -279,7 +279,7 @@ section {
 }
 
 .shortNavLogo {
-  width: 160px;
+  width: 100px;
   margin-bottom: 40px;
 }
 
@@ -309,9 +309,9 @@ section {
   }
 }
 .mainBtn {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: -5px 0;
   a {
     color: $black;
     transition: all 0.3s ease;
@@ -321,23 +321,27 @@ section {
     }
   }
 }
+.margin-l-auto {
+  margin-left: auto;
+  text-align: right;
+}
 .midwrpr {
   position: relative;
-  .info {
-    display: block;
-    padding-top: 30px;
-    margin-top: 20px;
-    border-top: 1px solid $gray_more;
-    span {
-      color: $black;
-      opacity: 0.7;
-      display: block;
-      margin-bottom: 5px;
-    }
-  }
+  // .info {
+  //   display: block;
+  //   padding-top: px;
+  //   margin-top: 20px;
+  //   border-top: 1px solid $gray_more;
+  //   span {
+  //     color: $black;
+  //     opacity: 0.7;
+  //     display: block;
+  //     margin-bottom: 5px;
+  //   }
+  // }
   .conPage {
     width: 300px;
-    height: 350px;
+    height: 550px;
     margin: auto 0;
     overflow-y: hidden;
   }

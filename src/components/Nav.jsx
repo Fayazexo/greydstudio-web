@@ -147,6 +147,9 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
           </span>
         </div>
       </div>
+
+      {/* Navigation starts */}
+
       <Wrapper open={isOn} shouldAnimate={shouldAnimate}>
         <Overlaybg
           open={isOn}
@@ -172,6 +175,7 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
             >
               <LinkTag>Home</LinkTag>
             </Page>
+            <hr />
             <Page
               className="mainBtn"
               variant="about"
@@ -179,6 +183,7 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
             >
               <LinkTag>About</LinkTag>
             </Page>
+            <hr />
             <Page
               className="mainBtn"
               variant="work"
@@ -186,6 +191,7 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
             >
               <LinkTag>Projects</LinkTag>
             </Page>
+            <hr />
             <Page
               className="mainBtn"
               variant="about"
@@ -193,6 +199,7 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
             >
               <LinkTag>News</LinkTag>
             </Page>
+            <hr />
             <Page
               className="mainBtn"
               variant="about"
@@ -200,6 +207,7 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
             >
               <LinkTag>Our Teams</LinkTag>
             </Page>
+            <hr />
             <Page
               className="mainBtn"
               variant="about"
@@ -207,6 +215,7 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
             >
               <LinkTag>Land Wanted</LinkTag>
             </Page>
+            <hr />
             <Page
               className="mainBtn"
               variant="about"
@@ -214,15 +223,16 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
             >
               <LinkTag>Contact Us</LinkTag>
             </Page>
+            <hr />
           </div>
 
-          <div className="info">
+          {/* <div className="info">
             <span>+880 19 8935 9890</span>
             <span className="link">info@greydstudio.net</span>
             <span>
               House 44/i, Flat A1, Road 4, Block D Bashundhara R/A, Dhaka 1229.
             </span>
-          </div>
+          </div> */}
         </Body>
         <SocialContainer className="soc-icon" open={isOn}>
           <span>Follow us:</span>
@@ -240,6 +250,8 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
           </span>
         </SocialContainer>
       </Wrapper>
+
+      {/* Navigation ends */}
     </header>
   )
 }
