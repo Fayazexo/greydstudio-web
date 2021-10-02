@@ -1,6 +1,7 @@
 import React, { Component, createRef, Fragment } from "react"
 import Reveal from "react-reveal/Reveal"
 import { withRouter } from "react-router"
+import "viewerjs/dist/viewer.css"
 import Footer from "../components/Footer"
 import Gallery from "../components/Gallery"
 import ProjectView from "../components/ProjectView"
@@ -14,31 +15,14 @@ import {
   Title,
 } from "../styles/Case.styles"
 import { Efectr, Efectr1, Efectr2 } from "../styles/effect.styles"
+
 const Images = [
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-1.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-2.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-3.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-4.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-5.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-6.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
+  { src: "./img/projects/Green/Green-1.jpg", alt: "Green Edge Exterior" },
+  { src: "./img/projects/Green/Green-2.jpg", alt: "Green Edge Exterior" },
+  { src: "./img/projects/Green/Green-3.jpg", alt: "Green Edge Exterior" },
+  { src: "./img/projects/Green/Green-4.jpg", alt: "Green Edge Exterior" },
+  { src: "./img/projects/Green/Green-5.jpg", alt: "Green Edge Exterior" },
+  { src: "./img/projects/Green/Green-6.jpg", alt: "Green Edge Exterior" },
 ]
 
 export const Infos = [
@@ -48,19 +32,27 @@ export const Infos = [
   },
   {
     title: "Type",
-    content: "Luxurious Apartment",
+    content: "Independent House",
   },
   {
-    title: "Apartment Area",
-    content: "2200 SQ. FT",
+    title: "Land Area",
+    content: "5 Katha",
   },
   {
-    title: "Orientation of the Apartment",
+    title: "Orientation of the Land",
     content: "East",
   },
   {
-    title: "Number of Rooms",
-    content: "3 Bedrooms, Family Living, Formal Living, Kitchen come Dining",
+    title: "Number of Apartments",
+    content: "Single House",
+  },
+  {
+    title: "Size of Units",
+    content: "4",
+  },
+  {
+    title: "Number of Car Parking",
+    content: "3 (Underground) with Semi Basement",
   },
 ]
 
@@ -71,7 +63,7 @@ export const TableData = [
   },
   {
     title: "Client",
-    content: "Mahadi & Farah",
+    content: "Green Edge",
   },
   {
     title: "Status",
@@ -79,13 +71,13 @@ export const TableData = [
   },
   {
     title: "Project Type",
-    content: "Interior Design",
+    content: "Exterior Design",
   },
 ]
 
 const projectSummary = {
-  title: "Mahadi & Farah",
-  category: "Interiors",
+  title: "Green Edge",
+  category: "Exteriors",
   details:
     "The large wood panel of this entertainment unit is what gives it the classic, warm feel. the drawers and cupboards ensure that there is plenty of storage for all your electronics and knick-knacks. go for this classic wood and white combo or pick shades that go well with the rest of your decor",
 }

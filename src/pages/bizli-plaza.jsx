@@ -3,6 +3,7 @@ import Reveal from "react-reveal/Reveal"
 import { withRouter } from "react-router"
 import Footer from "../components/Footer"
 import Gallery from "../components/Gallery"
+import ProjectView from "../components/ProjectView"
 import {
   BackArrow,
   BackButton,
@@ -13,7 +14,6 @@ import {
   Title,
 } from "../styles/Case.styles"
 import { Efectr, Efectr1, Efectr2 } from "../styles/effect.styles"
-
 const Images = [
   { src: "./img/projects/Bizli/Bizli-1.jpg", alt: "Bizli Plaza Exterior" },
   { src: "./img/projects/Bizli/Bizli-2.jpg", alt: "Bizli Plaza Exterior" },
@@ -22,6 +22,69 @@ const Images = [
   { src: "./img/projects/Bizli/Bizli-5.jpg", alt: "Bizli Plaza Exterior" },
   { src: "./img/projects/Bizli/Bizli-6.jpg", alt: "Bizli Plaza Exterior" },
 ]
+
+export const Infos = [
+  {
+    title: "Architect Name",
+    content: "Rahmatul Aziz",
+  },
+  {
+    title: "Type",
+    content: "Independent House",
+  },
+  {
+    title: "Land Area",
+    content: "5 Katha",
+  },
+  {
+    title: "Orientation of the Land",
+    content: "East",
+  },
+  {
+    title: "Number of Apartments",
+    content: "Single House",
+  },
+  {
+    title: "Size of Units",
+    content: "4",
+  },
+  {
+    title: "Number of Car Parking",
+    content: "3 (Underground) with Semi Basement",
+  },
+]
+
+export const TableData = [
+  {
+    title: "Category",
+    content: "Interiors",
+  },
+  {
+    title: "Client",
+    content: "Bizli",
+  },
+  {
+    title: "Status",
+    content: "Ongoing",
+  },
+  {
+    title: "Project Type",
+    content: "Interior Design",
+  },
+]
+
+const projectSummary = {
+  title: "Bizli Plaza",
+  category: "Interiors",
+  details:
+    "The large wood panel of this entertainment unit is what gives it the classic, warm feel. the drawers and cupboards ensure that there is plenty of storage for all your electronics and knick-knacks. go for this classic wood and white combo or pick shades that go well with the rest of your decor",
+}
+
+const backgroundUrl = Images[0].src
+
+export const Tags = ["Inspiration", "Decoration", "Interior", "Minimal"]
+
+export const VideoUrl = "https://www.youtube.com/embed/mGKykmmdkJc"
 
 export const ScrollTop = ({ children, location }) => {
   React.useEffect(() => window.scrollTo(0, 0), [location])
@@ -67,8 +130,7 @@ class Case extends Component {
               <Hero
                 className="mainhero"
                 style={{
-                  backgroundImage:
-                    "url('./img/projects/big/Project-Cover-bIZLI-PLAZA.jpg')",
+                  backgroundImage: `url(${backgroundUrl})`,
                 }}
               >
                 <div className="herocaption">
@@ -83,8 +145,8 @@ class Case extends Component {
                     <BackArrow src="./img/back.png" alt="Back to Projects" />
                     <span>Back </span>
                   </BackButton>
-                  <ClientTag>EXTERIOR</ClientTag>
-                  <Title>Bizli Plaza</Title>
+                  <ClientTag>{projectSummary.category}</ClientTag>
+                  <Title>{projectSummary.title}</Title>
                   <TechniqueTitle></TechniqueTitle>
                 </div>
               </Hero>
@@ -93,45 +155,34 @@ class Case extends Component {
             <section className="container-fluid" id="detailproject">
               <div className="row m-2-hor">
                 <div className="col-md-8">
-                  <p className="content">
-                    The large wood panel of this entertainment unit is what
-                    gives it the classic, warm feel. the drawers and cupboards
-                    ensure that there is plenty of storage for all your
-                    electronics and knick-knacks. go for this classic wood and
-                    white combo or pick shades that go well with the rest of
-                    your decor
-                  </p>
+                  <p className="content">{projectSummary.details}</p>
                 </div>
                 <div className="col-md-4 sticky">
                   <ul className="detailproject pb-4">
-                    <li>
-                      <span className="tile">Categories:</span>
-                      <span>Exteriors</span>
-                    </li>
-                    <li>
-                      <span className="tile">Client:</span>
-                      <span>Bizli Plaza</span>
-                    </li>
-                    <li>
-                      <span className="tile">Completed:</span>
-                      <span>Ongoing</span>
-                    </li>
-                    <li>
-                      <span className="tile">Project type:</span>
-                      <span>Exterior Design</span>
-                    </li>
+                    {TableData.map((data) => {
+                      return (
+                        <li>
+                          <span className="tile">{data.title}</span>
+                          <span>{data.content}</span>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
             </section>
-            <Gallery Images={Images} />
+
+            <ProjectView Infos={Infos} Images={Images} VideoUrl={VideoUrl}>
+              <Gallery Images={Images} />
+            </ProjectView>
+
             <div className="col-md-12">
               <div className="tags">
                 <span className="heading">Tags :</span>
-                <span className="content">Inspiration</span>
-                <span className="content">Decoation</span>
-                <span className="content">Interior</span>
-                <span className="content">Minimal</span>
+
+                {Tags.map((tag) => (
+                  <span className="content">{tag}</span>
+                ))}
               </div>
             </div>
             <div className="col-md-12">
@@ -141,7 +192,7 @@ class Case extends Component {
                   <i
                     onClick={() =>
                       window.open(
-                        "https://www.facebook.com/share.php?u=https://www.greydstudio.net/bizli-plaza"
+                        `https://www.facebook.com/share.php?u=${window.location.href}`
                       )
                     }
                     className="fa fa-facebook-f"

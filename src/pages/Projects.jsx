@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Reveal from "react-reveal/Reveal"
 import { withRouter } from "react-router-dom"
 import Footer from "../components/Footer"
+import { projectList } from "../data/"
 import { Efect, Efect1, Efect2 } from "../styles/effect.styles"
 import { LinkWrap, Overlay } from "../styles/Work.styles"
 
@@ -42,209 +43,42 @@ const Works = ({ history }) => {
       <Reveal effect="fadeInUp">
         <section className="container-fluid">
           <div className="row m-2-hor">
-            <div className="col-md-4 slick slickproject p-3">
-              <div className="slick-slide d-block">
-                <div>
-                  <div className="itm">
-                    <LinkWrap active={toCase === "/akramalikhan-interior"}>
-                      <Overlay
-                        active={!!toCase}
-                        onMouseDown={(e) => setCoords(e.nativeEvent.x)}
-                        onMouseUp={(e) =>
-                          handleCaseSwap(
-                            e.nativeEvent,
-                            "/akramalikhan-interior"
-                          )
-                        }
-                      >
-                        <div className="bg">
-                          <img
-                            src="./img/projects/Project-Banner-Akram-Ali-Khan-1st-Floor.jpg"
-                            className="img-fluid"
-                            alt="Imageworks"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="tag">Interior</div>
-                          <div className="name">Akram Ali Khan 1st Floor</div>
-                        </div>
-                        <div className="icon">
-                          <span>View Project</span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
+            {projectList.map((project) => {
+              return (
+                <div className="col-md-4 slick slickproject p-3">
+                  <div className="slick-slide d-block">
+                    <div>
+                      <div className="itm">
+                        <LinkWrap active={toCase === project.projectUrl}>
+                          <Overlay
+                            active={!!toCase}
+                            onMouseDown={(e) => setCoords(e.nativeEvent.x)}
+                            onMouseUp={(e) =>
+                              handleCaseSwap(e.nativeEvent, project.projectUrl)
+                            }
+                          >
+                            <div className="bg">
+                              <img
+                                src={project.coverUrl}
+                                className="img-fluid"
+                                alt="Imageworks"
+                              />
+                            </div>
+                            <div className="desc">
+                              <div className="tag">{project.category}</div>
+                              <div className="name">{project.projectName}</div>
+                            </div>
+                            <div className="icon">
+                              <span>View Project</span>
+                            </div>
+                          </Overlay>
+                        </LinkWrap>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-md-4 slick slickproject p-3">
-              <div className="slick-slide d-block">
-                <div>
-                  <div className="itm">
-                    <LinkWrap active={toCase === "/tushar-residence"}>
-                      <Overlay
-                        active={!!toCase}
-                        onMouseDown={(e) => setCoords(e.nativeEvent.x)}
-                        onMouseUp={(e) =>
-                          handleCaseSwap(e.nativeEvent, "/tushar-residence")
-                        }
-                      >
-                        <div className="bg">
-                          <img
-                            src="./img/projects/Project-Banner-Tushar-Residence.jpg"
-                            className="img-fluid"
-                            alt="Imageworks"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="tag">Exterior</div>
-                          <div className="name">Tushar Residence</div>
-                        </div>
-                        <div className="icon">
-                          <span>View Project</span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4 slick slickproject p-3">
-              <div className="slick-slide d-block">
-                <div>
-                  <div className="itm">
-                    <LinkWrap active={toCase === "/kalam-interior"}>
-                      <Overlay
-                        active={!!toCase}
-                        onMouseDown={(e) => setCoords(e.nativeEvent.x)}
-                        onMouseUp={(e) =>
-                          handleCaseSwap(e.nativeEvent, "/kalam-interior")
-                        }
-                      >
-                        <div className="bg">
-                          <img
-                            src="./img/projects/Project-Banner-Kalam-Interior.jpg"
-                            className="img-fluid"
-                            alt="Imageworks"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="tag">Interior</div>
-                          <div className="name">Kalam</div>
-                        </div>
-                        <div className="icon">
-                          <span>View Project</span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4 slick slickproject p-3">
-              <div className="slick-slide d-block">
-                <div>
-                  <div className="itm">
-                    <LinkWrap active={toCase === "/maruf-interior"}>
-                      <Overlay
-                        active={!!toCase}
-                        onMouseDown={(e) => setCoords(e.nativeEvent.x)}
-                        onMouseUp={(e) =>
-                          handleCaseSwap(e.nativeEvent, "/maruf-interior")
-                        }
-                      >
-                        <div className="bg">
-                          <img
-                            src="./img/projects/Project-Banner-Maruf-Interior.jpg"
-                            className="img-fluid"
-                            alt="Imageworks"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="tag">Interior</div>
-                          <div className="name">Maruf</div>
-                        </div>
-                        <div className="icon">
-                          <span>View Project</span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4 slick slickproject p-3">
-              <div className="slick-slide d-block">
-                <div>
-                  <div className="itm">
-                    <LinkWrap active={toCase === "/bizli-plaza"}>
-                      <Overlay
-                        active={!!toCase}
-                        onMouseDown={(e) => setCoords(e.nativeEvent.x)}
-                        onMouseUp={(e) =>
-                          handleCaseSwap(e.nativeEvent, "/bizli-plaza")
-                        }
-                      >
-                        <div className="bg">
-                          <img
-                            src="./img/projects/Project-Banner-BIZLI-PLAZA.jpg"
-                            className="img-fluid"
-                            alt="Imageworks"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="tag">Exterior</div>
-                          <div className="name">Bizli Plaza</div>
-                        </div>
-                        <div className="icon">
-                          <span>View Project</span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4 slick slickproject p-3">
-              <div className="slick-slide d-block">
-                <div>
-                  <div className="itm">
-                    <LinkWrap active={toCase === "/mahadi&farah-interior"}>
-                      <Overlay
-                        active={!!toCase}
-                        onMouseDown={(e) => setCoords(e.nativeEvent.x)}
-                        onMouseUp={(e) =>
-                          handleCaseSwap(
-                            e.nativeEvent,
-                            "/mahadi&farah-interior"
-                          )
-                        }
-                      >
-                        <div className="bg">
-                          <img
-                            src="./img/projects/Project-Banner-Mahadi-&-Farah-Interior.jpg"
-                            className="img-fluid"
-                            alt="Imageworks"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="tag">Interior</div>
-                          <div className="name">Mahadi & Farah</div>
-                        </div>
-                        <div className="icon">
-                          <span>View Project</span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
-                  </div>
-                </div>
-              </div>
-            </div>
+              )
+            })}
           </div>
         </section>
       </Reveal>

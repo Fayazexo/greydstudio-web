@@ -6,22 +6,28 @@ import "viewerjs-react/dist/index.css"
 
 const ImageWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   margin: auto;
   img {
     width: 100%;
     height: 270px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   @media only screen and (max-width: 1050px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     img {
       height: 200px;
     }
   }
   @media only screen and (max-width: 750px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 `
 const Flexxxo = styled.div`

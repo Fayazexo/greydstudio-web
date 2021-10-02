@@ -4157,6 +4157,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"can-use-dom@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "can-use-dom@npm:0.1.0"
+  checksum: 488fc94c40f2fcce46ebd41abf17ef0449acf0d6b145116036cd592a8e977e5729918d4b3b7c642ce7b1f5b83d330ade39a172cf6b6ef91093785991a868b308
+  languageName: node
+  linkType: hard
+
 "caniuse-api@npm:^3.0.0":
   version: 3.0.0
   resolution: "caniuse-api@npm:3.0.0"
@@ -5340,7 +5347,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.1.1, debug@npm:^3.2.5, debug@npm:^3.2.7":
+"debug@npm:^3.1.0, debug@npm:^3.1.1, debug@npm:^3.2.5, debug@npm:^3.2.7":
   version: 3.2.7
   resolution: "debug@npm:3.2.7"
   dependencies:
@@ -7322,6 +7329,7 @@ fsevents@~2.3.2:
     react: ^16.13.1
     react-animated-slider: ^2.0.0
     react-dom: ^16.13.1
+    react-facebook-sdk: ^1.1.1
     react-ga: ^3.3.0
     react-hook-form: ^7.13.0
     react-reveal: ^1.2.2
@@ -12348,7 +12356,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.10, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.5.10, prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -12653,6 +12661,19 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"react-facebook-sdk@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "react-facebook-sdk@npm:1.1.1"
+  dependencies:
+    babel-runtime: ^6.26.0
+    can-use-dom: ^0.1.0
+    debug: ^3.1.0
+    prop-types: ^15.6.0
+    react-spinner-children: ^1.0.8
+  checksum: 452186097939f549709d51f0caa06cbd2666f109a050d45d1a9168cf2c088e4b684c3662225e7846db722af7bdcba43c88edc79d81f1cc8a5338aa99faea0bdb
+  languageName: node
+  linkType: hard
+
 "react-ga@npm:^3.3.0":
   version: 3.3.0
   resolution: "react-ga@npm:3.3.0"
@@ -12818,6 +12839,18 @@ fsevents@~2.3.2:
     react: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
     react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
   checksum: 2a4207efcc525a4c659033b17ed7266faede4379686cc03ba2848e14c3c3a6ff04ad79e5e182d0a10d7755e143544d52ff97abc72d989949928cb3087f3b884b
+  languageName: node
+  linkType: hard
+
+"react-spinner-children@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "react-spinner-children@npm:1.0.8"
+  dependencies:
+    prop-types: ^15.6.0
+    spin.js: ^2.3.2
+  peerDependencies:
+    react: 15.x || 16.x
+  checksum: 6697b98566e522866077c5336d34d17ae212a7b7c1ecc02c5e77828c2b582eaff5f3fa1f6866b43521475788e2f6af9965bad32221f59bbee566c9d29449126f
   languageName: node
   linkType: hard
 
@@ -14202,6 +14235,13 @@ resolve@1.15.0:
     select-hose: ^2.0.0
     spdy-transport: ^3.0.0
   checksum: 2c739d0ff6f56ad36d2d754d0261d5ec358457bea7cbf77b1b05b0c6464f2ce65b85f196305f50b7bd9120723eb94bae9933466f28e67e5cd8cde4e27f1d75f8
+  languageName: node
+  linkType: hard
+
+"spin.js@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "spin.js@npm:2.3.2"
+  checksum: e064bec3568190de3c94ec1ecc09a5a03470e86402bfbdc48da4c0e524fba42142f36ed6336bdb3549014237b993316acb182242b5028b5ce3bc74fc095b2260
   languageName: node
   linkType: hard
 

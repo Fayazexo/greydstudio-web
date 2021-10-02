@@ -14,53 +14,56 @@ import {
   Title,
 } from "../styles/Case.styles"
 import { Efectr, Efectr1, Efectr2 } from "../styles/effect.styles"
-const Images = [
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-1.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-2.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-3.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-4.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-5.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
-  {
-    src: "./img/projects/Mahadi&Farah/Mahadi&Farah-6.jpg",
-    alt: "Mahadi & Farah Interior",
-  },
+
+export const Images = [
+  { src: "./img/projects/Kalam/Kalam-1.jpg", alt: "Kalam Interior" },
+  { src: "./img/projects/Kalam/Kalam-2.jpg", alt: "Kalam Interior" },
+  { src: "./img/projects/Kalam/Kalam-3.jpg", alt: "Kalam Interior" },
+  { src: "./img/projects/Kalam/Kalam-4.jpg", alt: "Kalam Interior" },
+  { src: "./img/projects/Kalam/Kalam-5.jpg", alt: "Kalam Interior" },
+  { src: "./img/projects/Kalam/Kalam-6.jpg", alt: "Kalam Interior" },
 ]
 
 export const Infos = [
   {
-    title: "Architect Name",
+    title: "Architech",
     content: "Rahmatul Aziz",
   },
   {
-    title: "Type",
-    content: "Luxurious Apartment",
+    title: "Land Area",
+    content: "31.94 katha",
   },
   {
-    title: "Apartment Area",
-    content: "2200 SQ. FT",
+    title: "Orientation of the Land",
+    content: "North-South",
   },
   {
-    title: "Orientation of the Apartment",
-    content: "East",
+    title: "Facing",
+    content: "South",
   },
   {
-    title: "Number of Rooms",
-    content: "3 Bedrooms, Family Living, Formal Living, Kitchen come Dining",
+    title: "Front Road",
+    content: "52 feet wide",
+  },
+  {
+    title: "Number of Apartments",
+    content: "24",
+  },
+  {
+    title: "Size of Units",
+    content: "6,100 - 6,800 sft (approx)",
+  },
+  {
+    title: "Number of Basements",
+    content: "02",
+  },
+  {
+    title: "Number of Car Parking",
+    content: "102",
+  },
+  {
+    title: "RAJUK Approval No.",
+    content: "127/15/420",
   },
 ]
 
@@ -71,7 +74,7 @@ export const TableData = [
   },
   {
     title: "Client",
-    content: "Mahadi & Farah",
+    content: "Kalam Interior",
   },
   {
     title: "Status",
@@ -84,13 +87,13 @@ export const TableData = [
 ]
 
 const projectSummary = {
-  title: "Mahadi & Farah",
+  title: "Kalam",
   category: "Interiors",
   details:
     "The large wood panel of this entertainment unit is what gives it the classic, warm feel. the drawers and cupboards ensure that there is plenty of storage for all your electronics and knick-knacks. go for this classic wood and white combo or pick shades that go well with the rest of your decor",
 }
 
-const backgroundUrl = Images[0].src
+const backgroundUrl = "./img/projects/big/Project-Cover-Kalam-Interior.jpg"
 
 export const Tags = ["Inspiration", "Decoration", "Interior", "Minimal"]
 

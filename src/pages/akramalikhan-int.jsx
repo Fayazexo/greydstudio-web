@@ -4,6 +4,7 @@ import { withRouter } from "react-router"
 import "viewerjs/dist/viewer.css"
 import Footer from "../components/Footer"
 import Gallery from "../components/Gallery"
+import ProjectView from "../components/ProjectView"
 import {
   BackArrow,
   BackButton,
@@ -24,10 +25,74 @@ const Images = [
   { src: "./img/projects/Akram/Akram-6.jpg", alt: "Akram Ali Khan 1st Floor" },
 ]
 
+export const Infos = [
+  {
+    title: "Architect Name",
+    content: "Rahmatul Aziz",
+  },
+  {
+    title: "Type",
+    content: "Independent House",
+  },
+  {
+    title: "Land Area",
+    content: "5 Katha",
+  },
+  {
+    title: "Orientation of the Land",
+    content: "East",
+  },
+  {
+    title: "Number of Apartments",
+    content: "Single House",
+  },
+  {
+    title: "Size of Units",
+    content: "4",
+  },
+  {
+    title: "Number of Car Parking",
+    content: "3 (Underground) with Semi Basement",
+  },
+]
+
+export const TableData = [
+  {
+    title: "Category",
+    content: "Interiors",
+  },
+  {
+    title: "Client",
+    content: "Akram Ali Khan Interior",
+  },
+  {
+    title: "Status",
+    content: "Ongoing",
+  },
+  {
+    title: "Project Type",
+    content: "Interior Design",
+  },
+]
+
+const projectSummary = {
+  title: "Akram Ali Khan",
+  category: "Interiors",
+  details:
+    "The large wood panel of this entertainment unit is what gives it the classic, warm feel. the drawers and cupboards ensure that there is plenty of storage for all your electronics and knick-knacks. go for this classic wood and white combo or pick shades that go well with the rest of your decor",
+}
+
+const backgroundUrl = Images[0].src
+
+export const Tags = ["Inspiration", "Decoration", "Interior", "Minimal"]
+
+export const VideoUrl = "https://www.youtube.com/embed/mGKykmmdkJc"
+
 export const ScrollTop = ({ children, location }) => {
   React.useEffect(() => window.scrollTo(0, 0), [location])
   return children
 }
+
 class Case extends Component {
   constructor(props) {
     super(props)
@@ -67,8 +132,7 @@ class Case extends Component {
               <Hero
                 className="mainhero"
                 style={{
-                  backgroundImage:
-                    "url('./img/projects/big/Project-Cover-Akram-Ali-Khan-1st-Floor.jpg')",
+                  backgroundImage: `url(${backgroundUrl})`,
                 }}
               >
                 <div className="herocaption">
@@ -83,8 +147,8 @@ class Case extends Component {
                     <BackArrow src="./img/back.png" alt="Back to Projects" />
                     <span>Back </span>
                   </BackButton>
-                  <ClientTag>INTERIOR</ClientTag>
-                  <Title>Akram Ali Khan 1st Floor</Title>
+                  <ClientTag>{projectSummary.category}</ClientTag>
+                  <Title>{projectSummary.title}</Title>
                   <TechniqueTitle></TechniqueTitle>
                 </div>
               </Hero>
@@ -93,46 +157,34 @@ class Case extends Component {
             <section className="container-fluid" id="detailproject">
               <div className="row m-2-hor">
                 <div className="col-md-8">
-                  <p className="content">
-                    The large wood panel of this entertainment unit is what
-                    gives it the classic, warm feel. the drawers and cupboards
-                    ensure that there is plenty of storage for all your
-                    electronics and knick-knacks. go for this classic wood and
-                    white combo or pick shades that go well with the rest of
-                    your decor
-                  </p>
+                  <p className="content">{projectSummary.details}</p>
                 </div>
                 <div className="col-md-4 sticky">
                   <ul className="detailproject pb-4">
-                    <li>
-                      <span className="tile">Categories:</span>
-                      <span>Interiors</span>
-                    </li>
-                    <li>
-                      <span className="tile">Client:</span>
-                      <span>Akram Ali Khan</span>
-                    </li>
-                    <li>
-                      <span className="tile">Completed:</span>
-                      <span>Ongoing</span>
-                    </li>
-                    <li>
-                      <span className="tile">Project type:</span>
-                      <span>Interior Design</span>
-                    </li>
+                    {TableData.map((data) => {
+                      return (
+                        <li>
+                          <span className="tile">{data.title}</span>
+                          <span>{data.content}</span>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
             </section>
-            <Gallery Images={Images} />
+
+            <ProjectView Infos={Infos} Images={Images} VideoUrl={VideoUrl}>
+              <Gallery Images={Images} />
+            </ProjectView>
 
             <div className="col-md-12">
               <div className="tags">
                 <span className="heading">Tags :</span>
-                <span className="content">Inspiration</span>
-                <span className="content">Decoation</span>
-                <span className="content">Interior</span>
-                <span className="content">Minimal</span>
+
+                {Tags.map((tag) => (
+                  <span className="content">{tag}</span>
+                ))}
               </div>
             </div>
             <div className="col-md-12">
@@ -142,7 +194,7 @@ class Case extends Component {
                   <i
                     onClick={() =>
                       window.open(
-                        "https://www.facebook.com/share.php?u=https://www.greydstudio.net/tushar-residence"
+                        `https://www.facebook.com/share.php?u=${window.location.href}`
                       )
                     }
                     className="fa fa-facebook-f"
