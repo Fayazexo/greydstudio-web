@@ -7,7 +7,6 @@ import Carouselprojects from "../components/Carouselprojects"
 import Footer from "../components/Footer"
 import Slider from "../components/Sliderhome"
 import { Efect } from "../styles/effect.styles"
-import { LinkWrap, Overlay } from "../styles/Work.styles"
 
 const Home = ({ history }) => {
   return (
@@ -102,39 +101,11 @@ const Home = ({ history }) => {
       <Reveal effect="fadeInUp">
         <section className="container-fluid">
           <div className="row m-2-hor">
-            <div className="col-md-4 slick slicknews p-3 mb-0">
-              <div className="slick-slide d-block">
-                <div className="mr-0">
-                  <div className="itm mr-0">
-                    <LinkWrap>
-                      <Overlay>
-                        <div className="bg">
-                          <img
-                            src="./img/news/news1.jpg"
-                            className="img-fluid"
-                            alt="Imageteam"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="date"> Aug 24, 2021</div>
-                          <div className="name">
-                            Project GREEN EDGE by Grey.D'Studio
-                          </div>
-                        </div>
-                        <div className="icon">
-                          <span
-                            onClick={() =>
-                              window.open("https://youtu.be/ArBskCj6Vpg")
-                            }
-                          >
-                            Watch on YouTube
-                          </span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <span role="img" aria-label="warning emoji">
+                ⚠️
+              </span>
+              Under Maintenance
             </div>
             {/* <div className="col-md-4 slick slicknews p-3 mb-0">
               <div className="slick-slide d-block">
