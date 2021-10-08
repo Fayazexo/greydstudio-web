@@ -1,12 +1,34 @@
 import React from "react"
 import Reveal from "react-reveal/Reveal"
 import { withRouter } from "react-router-dom"
+import styled from "styled-components"
 import Abouthome from "../components/Abouthome"
 import Carouselfeature from "../components/Carouselfeature"
 import Carouselprojects from "../components/Carouselprojects"
 import Footer from "../components/Footer"
 import Slider from "../components/Sliderhome"
 import { Efect } from "../styles/effect.styles"
+
+const FlexContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  gap: 40px;
+  justify-content: center;
+`
+const videoData = [
+  {
+    link: "https://www.youtube.com/embed/FyJsKRXnGkM",
+  },
+  {
+    link: "https://www.youtube.com/embed/mGKykmmdkJc",
+  },
+  {
+    link: "https://www.youtube.com/embed/ArBskCj6Vpg",
+  },
+]
 
 const Home = ({ history }) => {
   return (
@@ -18,8 +40,6 @@ const Home = ({ history }) => {
           <Slider />
         </section>
       </Reveal>
-
-      {/* <Featurehome /> */}
 
       <Reveal effect="fadeInUp">
         <Abouthome />
@@ -38,26 +58,6 @@ const Home = ({ history }) => {
         </section>
       </Reveal>
 
-      {/* <Reveal effect="fadeInUp">
-        <section className="container-fluid py-0">
-          <div className="row m-2-hor">
-            <div className="col-12">
-              <Carouselclient />
-            </div>
-          </div>
-        </section>
-      </Reveal> */}
-
-      {/* <Reveal effect="fadeInUp">
-        <section className="container-fluid">
-          <div className="row m-2-hor">
-            <div className="col-12">
-              <Carouselclientb />
-            </div>
-          </div>
-        </section>
-      </Reveal> */}
-
       <Reveal effect="fadeInUp">
         <section className="container-fluid py-0">
           <div className="row m-2-hor">
@@ -73,22 +73,6 @@ const Home = ({ history }) => {
         </section>
       </Reveal>
 
-      {/* <Reveal effect="fadeInUp">
-        <section className="container-fluid">
-          <div className="row m-2-hor">
-            <div className="col-12">
-              <div className="heading">Meet our Team</div>
-            </div>
-            <div className="col-12">
-              <TeamsCor />
-            </div>
-          </div>
-        </section>
-      </Reveal>
-
-      <Reveal effect="fadeInUp">
-        <Accomplish />
-    </Reveal>*/}
       <Reveal effect="fadeInUp">
         <section className="container-fluid pb-0">
           <div className="row m-2-hor">
@@ -98,87 +82,22 @@ const Home = ({ history }) => {
           </div>
         </section>
       </Reveal>
-      <Reveal effect="fadeInUp">
-        <section className="container-fluid">
-          <div className="row m-2-hor">
-            <div>
-              <span role="img" aria-label="warning emoji">
-                ⚠️
-              </span>
-              Under Maintenance
-            </div>
-            {/* <div className="col-md-4 slick slicknews p-3 mb-0">
-              <div className="slick-slide d-block">
-                <div className="mr-0">
-                  <div className="itm mr-0">
-                    <LinkWrap>
-                      <Overlay>
-                        <div className="bg">
-                          <img
-                            src="./img/news/news2.jpg"
-                            className="img-fluid"
-                            alt="Imageteam"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="date"> Mar 12, 2021</div>
-                          <div className="name">
-                            Berger Home Diaries - Fabulous House 2
-                          </div>
-                        </div>
-                        <div className="icon">
-                          <span
-                            onClick={() =>
-                              window.open("https://youtu.be/FyJsKRXnGkM")
-                            }
-                          >
-                            Watch on YouTube
-                          </span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 slick slicknews p-3 mb-0">
-              <div className="slick-slide d-block">
-                <div className="mr-0">
-                  <div className="itm mr-0">
-                    <LinkWrap>
-                      <Overlay>
-                        <div className="bg">
-                          <img
-                            src="./img/news/news3.jpg"
-                            className="img-fluid"
-                            alt="Imageteam"
-                          />
-                        </div>
-                        <div className="desc">
-                          <div className="date"> Sept 08, 2020</div>
-                          <div className="name">
-                            Berger Home Diaries - Fabulous House 1
-                          </div>
-                        </div>
-                        <div className="icon">
-                          <span
-                            onClick={() =>
-                              window.open("https://youtu.be/mGKykmmdkJc")
-                            }
-                          >
-                            Watch on YouTube
-                          </span>
-                        </div>
-                      </Overlay>
-                    </LinkWrap>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-          </div>
-        </section>
-      </Reveal>
 
+      <Reveal effect="fadeInUp">
+        <FlexContainer>
+          {videoData.map((video) => (
+            <iframe
+              width="580"
+              height="315"
+              src={video.link}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          ))}
+        </FlexContainer>
+      </Reveal>
       <Footer />
     </div>
   )
