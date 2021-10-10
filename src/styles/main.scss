@@ -121,6 +121,9 @@ section {
   flex-direction: column;
   align-items: flex-end;
 }
+.blockScrolling {
+  position: fixed;
+}
 .head {
   border-radius: 0;
   padding: 0;
