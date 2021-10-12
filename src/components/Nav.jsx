@@ -12,13 +12,6 @@ import {
   Wrapper,
 } from "../styles/Navigation.styles"
 import NavButton from "./NavButton"
-import styled from "styled-components"
-
-const ScrollBlock = styled.div`
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
-`
 
 const NavigationMenu = ({ history, hasBackground, setBackground }) => {
   const [isOn, setState] = useState(false)
