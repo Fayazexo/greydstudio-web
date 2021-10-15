@@ -8,6 +8,7 @@ import Carouselprojects from "../components/Carouselprojects"
 import Footer from "../components/Footer"
 import Slider from "../components/Sliderhome"
 import { Efect } from "../styles/effect.styles"
+import Gallery from "../components/Gallery"
 
 const FlexContainer = styled.div`
   max-width: 1200px;
@@ -18,6 +19,30 @@ const FlexContainer = styled.div`
   gap: 40px;
   justify-content: center;
 `
+
+const Gap = styled.div`
+  margin: 100px;
+`
+
+export const InstaImages = [
+  { src: "./img/instagram/image-1.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-2.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-3.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-4.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-5.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-6.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-7.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-8.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-9.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-10.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-11.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-12.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-13.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-14.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-15.jpg", alt: "Instagram Feed Image" },
+  { src: "./img/instagram/image-16.jpg", alt: "Instagram Feed Image" },
+].reverse()
+
 const videoData = [
   {
     link: "https://www.youtube.com/embed/FyJsKRXnGkM",
@@ -98,6 +123,15 @@ const Home = ({ history }) => {
           ))}
         </FlexContainer>
       </Reveal>
+      <Gap />
+      <Reveal effect="fadeInUp">
+        <FlexContainer>
+          <img width="40px" height="40px" src="./img/insta-ico.png" alt="" />
+          <h2>Instagram</h2>
+        </FlexContainer>
+        <Gallery Images={InstaImages} />
+      </Reveal>
+      <Gap />
       <Footer />
     </div>
   )
