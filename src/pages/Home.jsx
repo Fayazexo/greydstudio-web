@@ -1,4 +1,5 @@
 import React from "react"
+
 import Reveal from "react-reveal/Reveal"
 import { withRouter } from "react-router-dom"
 import styled from "styled-components"
@@ -24,17 +25,11 @@ const Gap = styled.div`
   margin: 100px;
 `
 
+const GapMini = styled.div`
+  margin: 50px;
+`
+
 export const InstaImages = [
-  { src: "./img/instagram/image-1.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-2.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-3.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-4.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-5.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-6.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-7.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-8.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-9.jpg", alt: "Instagram Feed Image" },
-  { src: "./img/instagram/image-10.jpg", alt: "Instagram Feed Image" },
   { src: "./img/instagram/image-11.jpg", alt: "Instagram Feed Image" },
   { src: "./img/instagram/image-12.jpg", alt: "Instagram Feed Image" },
   { src: "./img/instagram/image-13.jpg", alt: "Instagram Feed Image" },
@@ -130,8 +125,12 @@ const Home = ({ history }) => {
           <h2>Instagram</h2>
         </FlexContainer>
         <Gallery Images={InstaImages} />
+        <GapMini />
+        <FlexContainer>
+          <a href="https://www.instagram.com/grey.dstudio/">See more</a>
+        </FlexContainer>
       </Reveal>
-      <Gap />
+      <GapMini />
       <Footer />
     </div>
   )
